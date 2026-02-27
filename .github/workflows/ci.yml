@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  sanity:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Sanity check
+        run: |
+          echo "Repo content:"
+          ls -la
+          echo ""
+          echo "Java version:"
+          java -version
+          echo ""
+          echo "README exists?"
+          test -f README.md && echo "OK" || (echo "Missing README.md" && exit 1)
+
+      - name: Run tests if project exists (optional)
+        run: |
+          if [ -f "./gradlew" ]; then
+            chmod +x ./gradlew
+            ./gradlew test
+          elif [ -f "pom.xml" ]; then
+            mvn -q test
+          else
+            echo "No Gradle/Maven project yet — skipping tests."
+          fi
