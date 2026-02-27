@@ -28,13 +28,11 @@ jobs:
           echo "README exists?"
           test -f README.md && echo "OK" || (echo "Missing README.md" && exit 1)
 
-      - name: Run tests if project exists (optional)
+      - name: Run Java tests (Maven)
         run: |
-          if [ -f "./gradlew" ]; then
-            chmod +x ./gradlew
-            ./gradlew test
-          elif [ -f "pom.xml" ]; then
+          if [ -f "java/hello-junit/pom.xml" ]; then
+            cd java/hello-junit
             mvn -q test
           else
-            echo "No Gradle/Maven project yet — skipping tests."
+            echo "No Maven project found in java/hello-junit — skipping."
           fi
