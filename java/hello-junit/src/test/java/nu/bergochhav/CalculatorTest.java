@@ -11,3 +11,8 @@ class CalculatorTest {
         assertEquals(5, calc.add(2, 3));
     }
 }
+@Test
+void add_negativeNumbers_returnsSum() {
+    Calculator calc = new Calculator();
+    assertEquals(-5, calc.add(-2, -3));
+}
