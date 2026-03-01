@@ -10,7 +10,8 @@ Det här repot är min samlingsplats för övningar, anteckningar och småprojek
 - Kunna köra tester lokalt och i GitHub Actions
 
 ## CI
-- GitHub Actions kör automatiskt Java/JUnit-tester vid push och pull request.
+- GitHub Actions kör automatiskt Java/JUnit-tester (Maven) vid push och pull request.
+- GitHub Actions kör även API-smoketester (Postman/Newman) mot httpbin.org.
 
 ## Fokus
 - Testdesign (risk, krav, testfall)
