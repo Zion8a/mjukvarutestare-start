@@ -1,4 +1,4 @@
-![CI](../../actions/workflows/ci.yml/badge.svg)
+[![CI](../../actions/workflows/ci.yml/badge.svg)](../../actions/workflows/ci.yml)
 
 # mjukvarutestare-start
 
