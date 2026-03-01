@@ -36,3 +36,9 @@ jobs:
           else
             echo "No Maven project found in java/hello-junit — skipping."
           fi
+
+      - name: Run API tests (Postman/Newman)
+        run: |
+          npm install -g newman
+          newman run api/postman/httpbin.postman_collection.json
+          

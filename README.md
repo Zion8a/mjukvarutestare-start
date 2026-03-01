@@ -26,6 +26,7 @@ Det här repot är min samlingsplats för övningar, anteckningar och småprojek
 - /api
 - /automation
 - /java
+- /testcases – exempel på testfall kopplade till kod/exempelprojekt
 
 ## Kontakt
 johan@bergochhav.nu
