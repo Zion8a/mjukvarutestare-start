@@ -5,6 +5,8 @@
 Hej! Jag heter Johan Larsson och studerar till mjukvarutestare (YH).
 Det här repot är min samlingsplats för övningar, anteckningar och småprojekt under utbildningen – med mål att bli anställningsbar som Junior QA/Quality Engineer.
 
+📌 Se: [PORTFOLIO.md](PORTFOLIO.md)
+
 ## Mål
 - Bygga 2–3 tydliga repos som visar testautomation och CI
 - Kunna köra tester lokalt och i GitHub Actions
